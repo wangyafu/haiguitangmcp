@@ -1,0 +1,22 @@
+[project]
+name = "haiguitang-mcp"
+version = "0.1.2"
+description = "海龟汤游戏的mcp服务"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+
+[project.scripts]
+haiguitang-mcp = "haiguitang_mcp.server:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*.md"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
